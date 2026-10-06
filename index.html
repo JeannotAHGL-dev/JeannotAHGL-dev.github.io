@@ -623,7 +623,7 @@ function openModal(id){
   $('#modalBody').innerHTML=`<div class="eyebrow">${m.cat}</div><h3>${d[titleKey[id]]}</h3><p style="color:var(--muted)">${m.desc}</p>
   <ul>${m.pts.map(p=>`<li>${p}</li>`).join('')}</ul>
   <div class="tags">${m.stack.map(s=>`<span class="tag">${s}</span>`).join('')}</div>
-  <div style="margin-top:22px"><a class="btn btn-o" href="https://github.com/JeannotAHGL-dev" target="_blank" rel="noopener">${d.m_gh}</a></div>`;
+  <div style="margin-top:22px"><a class="btn btn-o" href="https://booki-stay-front-chi.vercel.app/" target="_blank" rel="noopener">${d.m_gh}</a></div>`;
   $('#modal').classList.add('open');
 }
 function closeModal(){currentModal=null;$('#modal').classList.remove('open')}
