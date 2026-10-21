@@ -543,9 +543,9 @@ fr:{
   roles:['Développeur Fullstack Junior','Développeur React & Next.js','Développeur mobile Flutter',"Passionné d'IA & vision par ordinateur"],
   m_gh:'Consulter le site ↗',
   modal:{
-    hotel:{cat:'Web · React / Next.js',desc:"Un système complet de gestion d'hôtel avec une interface moderne et responsive.",pts:['Gestion des réservations, des chambres et des clients','Tableau de bord admin : disponibilités et réservations en temps réel',"Système d'authentification sécurisé pour la gestion des accès"],stack:['React','Next.js','Authentification','UI Responsive']},
-    mangrove:{cat:'IA · Python / YOLO',desc:"Un projet de recherche en IA sur l'extraction automatique de feuilles et la détection du stress abiotique.",pts:["Pipeline de segmentation d'instances avec YOLO",'Transfer learning adapté à des conditions réelles complexes','Mask mAP élevé pour une morphologie foliaire précise au pixel près','Prétraitement automatisé alimentant un classifieur ResNet50'],stack:['Python','YOLO','ResNet50','Transfer Learning']},
-    loan:{cat:'Desktop · Java',desc:'Une application desktop de gestion de microfinance (janv. – mars 2025).',pts:['Interface Java réalisée sous NetBeans','Suivi des clients, prêts et remboursements avec PostgreSQL',"Ajout, suppression et modification des enregistrements via une interface intuitive"],stack:['Java','NetBeans','PostgreSQL']}
+    hotel:{cat:'Web · React / Next.js',desc:"Un système complet de gestion d'hôtel avec une interface moderne et responsive.",pts:['Gestion des réservations, des chambres et des clients','Tableau de bord admin : disponibilités et réservations en temps réel',"Système d'authentification sécurisé pour la gestion des accès"],stack:['React','Next.js','Authentification','UI Responsive'],url:"https://booki-stay-front-chi.vercel.app/"},
+    mangrove:{cat:'IA · Python / YOLO',desc:"Un projet de recherche en IA sur l'extraction automatique de feuilles et la détection du stress abiotique.",pts:["Pipeline de segmentation d'instances avec YOLO",'Transfer learning adapté à des conditions réelles complexes','Mask mAP élevé pour une morphologie foliaire précise au pixel près','Prétraitement automatisé alimentant un classifieur ResNet50'],stack:['Python','YOLO','ResNet50','Transfer Learning'],url:"https://booki-stay-front-chi.vercel.app/"},
+    loan:{cat:'Desktop · Java',desc:'Une application desktop de gestion de microfinance (janv. – mars 2025).',pts:['Interface Java réalisée sous NetBeans','Suivi des clients, prêts et remboursements avec PostgreSQL',"Ajout, suppression et modification des enregistrements via une interface intuitive"],stack:['Java','NetBeans','PostgreSQL'],url:"https://booki-stay-front-chi.vercel.app/"}
   }
 }
 };
@@ -623,7 +623,7 @@ function openModal(id){
   $('#modalBody').innerHTML=`<div class="eyebrow">${m.cat}</div><h3>${d[titleKey[id]]}</h3><p style="color:var(--muted)">${m.desc}</p>
   <ul>${m.pts.map(p=>`<li>${p}</li>`).join('')}</ul>
   <div class="tags">${m.stack.map(s=>`<span class="tag">${s}</span>`).join('')}</div>
-  <div style="margin-top:22px"><a class="btn btn-o" href="https://booki-stay-front-chi.vercel.app/" target="_blank" rel="noopener">${d.m_gh}</a></div>`;
+  <div style="margin-top:22px"><a class="btn btn-o" href=${m.url} target="_blank" rel="noopener">${d.m_gh}</a></div>`;
   $('#modal').classList.add('open');
 }
 function closeModal(){currentModal=null;$('#modal').classList.remove('open')}
